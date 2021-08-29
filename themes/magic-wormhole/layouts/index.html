@@ -1,6 +1,11 @@
 {{ define "main" }}
 <!-- TODO: remove the dirty svg background hackery -->
 <div class="hero">
+  {{ range .Site.Pages }}
+<li>
+    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+</li>
+{{ end }}
     {{ $bg1 := resources.Get "img/background.svg" | resources.Minify }}
     <div class="hero-container" style="background-image: url('{{ $bg1.Permalink }}');">
       <h1>Get things from one computer to another, <u>safely</u></>.</h1>

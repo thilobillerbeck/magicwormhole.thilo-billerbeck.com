@@ -475,3 +475,18 @@ footer {
   padding: 1rem;
   background-color: #4C134F;
 }
+
+a {
+  color: lighten($color: #4C134F, $amount: 20);
+}
+
+article {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+pre {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
