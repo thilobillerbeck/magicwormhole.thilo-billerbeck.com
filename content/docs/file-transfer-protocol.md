@@ -1,5 +1,6 @@
 ---
 title: File-Transfer Protocol
+menu: "docs"
 ---
 
 The `bin/wormhole` tool uses a Wormhole to establish a connection, then

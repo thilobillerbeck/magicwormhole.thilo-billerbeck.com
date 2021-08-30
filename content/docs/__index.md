@@ -1,5 +1,6 @@
 ---
 title: Protocol/API/Library Introduction
+menu: "docs"
 ---
 
 The magic-wormhole (Python) distribution provides several things: an

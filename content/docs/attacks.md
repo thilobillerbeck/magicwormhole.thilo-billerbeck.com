@@ -1,5 +1,6 @@
 ---
 title: Known Vulnerabilities
+menu: "docs"
 ---
 ## Low-probability Man-In-The-Middle Attacks
 

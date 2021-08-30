@@ -1,6 +1,6 @@
 ---
 title: The Magic-Wormhole API
-darft: false
+menu: "docs"
 ---
 
 This library provides a mechanism to securely transfer small amounts

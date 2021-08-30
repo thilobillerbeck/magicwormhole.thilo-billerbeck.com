@@ -1,5 +1,6 @@
 ---
 title: Tor Support in Magic-Wormhole
+menu: "docs"
 ---
 
 The ``wormhole`` command-line tool has built-in support for performing

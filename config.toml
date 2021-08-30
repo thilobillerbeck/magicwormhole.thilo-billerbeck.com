@@ -2,3 +2,13 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Magic Wormhole'
 assetDir = "assets"
+
+[menu]
+[[menu.main]]
+name = 'Home'
+url = '/'
+weight = -110
+[[menu.main]]
+name = 'Docs'
+url = '/docs/welcome'
+weight = -100

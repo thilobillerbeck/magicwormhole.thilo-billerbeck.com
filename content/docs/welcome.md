@@ -1,5 +1,6 @@
 ---
 title: Welcome
+menu: "docs"
 ---
 
 Get things from one computer to another, safely.
@@ -314,7 +315,8 @@ Every so often, you might get a traceback with the following
 kind of error:
 
 ```
-pkg_resources.DistributionNotFound: The 'magic-wormhole==0.9.1-268.g66e0d86.dirty' distribution was not found and is required by the application
+pkg_resources.DistributionNotFound: The 'magic-wormhole==0.9.1-268.g66e0d86.dirty'
+distribution was not found and is required by the application
 ```
 
 If this happens, run `pip install -e .[dev]` again.

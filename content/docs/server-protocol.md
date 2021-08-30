@@ -1,5 +1,6 @@
 ---
 title: Rendezvous Server Protocol
+menu: "docs"
 ---
 
 ## Concepts

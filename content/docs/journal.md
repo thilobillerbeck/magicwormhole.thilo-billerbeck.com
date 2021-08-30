@@ -1,5 +1,6 @@
 ---
 title: Journaled Mode
+menu: "docs"
 ---
 
 (note: this section is speculative, the code has not yet been written)

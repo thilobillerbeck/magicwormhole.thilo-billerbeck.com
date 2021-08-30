@@ -1,8 +1,9 @@
 {{ define "main" }}
 <div class="doc-container">
     <aside>
-        {{ range where .Site.Pages "Section" "docs" }}
-            <a href="{{ .Permalink | relURL }}" class="sidebar-menu-item" title="{{ .Title }}">{{ .Title }}</a>
+        <b>Documentation</b>
+        {{ range .Site.Menus.docs }}
+        <a href="{{ .URL }}" class="sidebar-menu-item" title="{{ .Name }}">{{ .Name }}</a>
         {{ end }}
     </aside>
     <article>

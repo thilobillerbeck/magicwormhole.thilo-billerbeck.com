@@ -1,5 +1,6 @@
 ---
 title: Client-to-Client Protocol
+menu: "docs"
 ---
 
 Wormhole clients do not talk directly to each other (at least at first): they

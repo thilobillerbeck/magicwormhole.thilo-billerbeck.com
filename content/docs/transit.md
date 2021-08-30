@@ -1,5 +1,6 @@
 ---
 title: Transit Protocol
+menu: "docs"
 ---
 
 The Transit protocol is responsible for establishing an encrypted

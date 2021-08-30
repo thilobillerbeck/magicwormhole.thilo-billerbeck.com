@@ -1,5 +1,6 @@
 ---
 title: Dilation Internals
+menu: "docs"
 ---
 
 Wormhole dilation involves several moving parts. Both sides exchange messages

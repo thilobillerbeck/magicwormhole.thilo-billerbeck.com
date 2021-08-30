@@ -1,5 +1,16 @@
 <header>
     <div class="container">
-      Test
+        <nav>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <ul>
+              <li>
+                  <a href="{{ .URL }}">
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+            </ul>
+            {{ end }}
+        </nav>
     </div>
   </header>
