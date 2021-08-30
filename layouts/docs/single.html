@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="doc-container">
+    <aside>
+        {{ range where .Site.Pages "Section" "docs" }}
+            <a href="{{ .Permalink | relURL }}" class="sidebar-menu-item" title="{{ .Title }}">{{ .Title }}</a>
+        {{ end }}
+    </aside>
+    <article>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</div>
+{{ end }}

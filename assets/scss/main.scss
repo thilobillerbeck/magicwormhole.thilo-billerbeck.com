@@ -434,7 +434,6 @@ header {
   z-index: 100;
   position: absolute;
   width: 100%;
-  background-color: red;
 }
 
 section {
@@ -480,13 +479,35 @@ a {
   color: lighten($color: #4C134F, $amount: 20);
 }
 
-article {
-  max-width: 1020px;
-  margin: 0 auto;
-}
-
 pre {
   background-color: black;
-  color: white;
+  color: #ddf1ff;
   padding: 1rem;
+}
+
+.doc-container {
+  max-width: 70vw;
+  margin: 0 auto;
+  display: grid; 
+  grid-template-columns: 1fr 3fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 1rem; 
+  grid-template-areas: 
+    ". ."; 
+}
+
+.sidebar-menu-item {
+  display: block;
+  text-decoration: none;
+  color: #ddf1ff; 
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  &:hover {
+    background-color: lighten($color: #2b0030, $amount: 20%);
+  }
+}
+
+::selection {
+  color: #4C134F;
+  background: #ddf1ff;
 }
