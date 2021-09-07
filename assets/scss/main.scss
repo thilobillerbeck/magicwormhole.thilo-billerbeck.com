@@ -358,6 +358,8 @@ body {
   font-family: sans-serif;
   background-color: #2b0030;
   color: #ddf1ff;
+  display: flex;
+  flex-flow: column;
 
   /* Lead / Lead 1 */
   font-family: Inter;
@@ -377,6 +379,9 @@ body {
   background-origin: border-box;
   background-size: cover;
   min-height: 100vh;
+  @media(max-width: 768px) {
+    min-height: 50vh;
+  }
 }
 
 .hero-container {
@@ -390,6 +395,20 @@ body {
   grid-auto-flow: row;
   grid-template-areas: ". .";
   align-items: center;
+
+  @media(max-width: 768px) {
+    max-width: 100vw;
+    grid-template-columns: 1fr; 
+    margin: 0;
+    padding: 1rem;
+    height: 50vh;
+    grid-template-areas: 
+      "."; 
+      gap: 0; 
+      h1 {
+        font-size: 3rem;
+      }
+  }
 }
 
 .container {
@@ -423,9 +442,6 @@ h2 {
 }
 
 header {
-  z-index: 100;
-  top: 0;
-  position: absolute;
   width: 100%;
 }
 
@@ -441,6 +457,15 @@ section {
     grid-auto-flow: row;
     grid-template-areas: ". .";
     align-items: center;
+    @media(max-width: 768px) {
+      max-width: 100vw;
+      grid-template-columns: 1fr; 
+      margin: 0;
+      padding: 1rem;
+      grid-template-areas: 
+        "."; 
+        gap: 0; 
+    }
   }
 }
 
@@ -480,13 +505,22 @@ pre {
 
 .doc-container {
   max-width: 70vw;
-  margin: 5rem auto 0 auto;
   display: grid; 
+  margin: 0 auto;
   grid-template-columns: 1fr 3fr; 
   grid-template-rows: 1fr; 
   gap: 0px 1rem; 
   grid-template-areas: 
     ". ."; 
+  @media(max-width: 768px) {
+    max-width: 100vw;
+    grid-template-columns: 1fr; 
+    margin: 0;
+    padding: 1rem;
+    grid-template-areas: 
+      "."; 
+      gap: 0; 
+  }
 }
 
 .sidebar-menu-item {
@@ -500,6 +534,10 @@ pre {
   &:hover {
     border-left-color: lighten($color: #2b0030, $amount: 20%);
     border-right-color: lighten($color: #2b0030, $amount: 20%);
+  }
+
+  @media(max-width: 768px) {
+    padding: 0.75rem 0;
   }
 }
 
@@ -524,4 +562,12 @@ nav {
       }
     }
   }
+}
+
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
