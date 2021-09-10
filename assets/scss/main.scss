@@ -385,7 +385,7 @@ body {
 }
 
 .hero-container {
-  max-width: 1400pt;
+  max-width: 70vw;
   height: 100vh;
   margin: 0 auto;
   display: grid;
@@ -412,7 +412,7 @@ body {
 }
 
 .container {
-  max-width: 1400pt;
+  max-width: 70vw;
   margin: 0 auto;
 }
 
@@ -447,7 +447,7 @@ header {
 
 section {
   &.two-columns {
-    max-width: 1400pt;
+    max-width: 70vw;
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
@@ -494,13 +494,23 @@ footer {
 }
 
 a {
-  color: lighten($color: #4C134F, $amount: 20);
+  color: lighten($color: #4C134F, $amount: 30);
+}
+
+code {
+  background-color: black;
+  color: #ddf1ff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
 }
 
 pre {
   background-color: black;
   color: #ddf1ff;
   padding: 1rem;
+  code {
+    background-color:transparent;
+  }
 }
 
 .doc-container {
@@ -539,6 +549,13 @@ pre {
   @media(max-width: 768px) {
     padding: 0.75rem 0;
   }
+}
+
+.sidebar-menu-heading {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
 }
 
 ::selection {

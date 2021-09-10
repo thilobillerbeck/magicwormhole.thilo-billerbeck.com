@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="doc-container">
     <aside>
-        <b>Documentation</b>
+        <span class="sidebar-menu-heading">Documentation</span>
         {{ range .Site.Menus.docs }}
         <a href="{{ .URL }}" class="sidebar-menu-item" title="{{ .Name }}">{{ .Name }}</a>
         {{ end }}
