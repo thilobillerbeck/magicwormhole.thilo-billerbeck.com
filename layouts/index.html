@@ -51,6 +51,8 @@
 {{ $bg4 := resources.Get "img/background4.svg" | resources.Minify }}
 <div class="section-4" style="background-image: url('{{ $bg4.Permalink }}');">
   <section class="one-column">
+    <h2>{{ .Site.Data.frontpage.table.title }}</h2>
+    <p>{{ .Site.Data.frontpage.table.text }}</p>
     <table>
       <tr>
         <th>Name</th>
@@ -61,7 +63,7 @@
       </tr>
       {{ range .Site.Data.frontpage.comparisonTable }}
       <tr>
-        <td>{{ .name }}</td>
+        <td><b>{{ .name }}</b></td>
         <td>{{ .featureX }}</td>
         <td>{{ .featureY }}</td>
         <td>{{ .featureZ }}</td>

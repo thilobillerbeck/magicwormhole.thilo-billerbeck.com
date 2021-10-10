@@ -31,6 +31,13 @@ section2:
     diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem
     egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non
     commodo volutpat, pharetra, vel.
+table:
+  title: "Test"
+  text: >
+    Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Condimentum
+    diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem
+    egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non
+    commodo volutpat, pharetra, vel.
 comparisonTable:
   example:
     name: "Example"
