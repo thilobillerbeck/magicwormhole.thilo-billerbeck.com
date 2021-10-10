@@ -1,83 +1,74 @@
 {{ define "main" }}
 <!-- TODO: remove the dirty svg background hackery -->
 <div class="hero">
-    {{ $bg1 := resources.Get "img/background.svg" | resources.Minify }}
-    <div class="hero-container" style="background-image: url('{{ $bg1.Permalink }}');">
-      <h1>Get things from one computer to another, <u>safely</u></>.</h1>
-      <div></div>
-    </div>
+  {{ $bg1 := resources.Get "img/background.svg" | resources.Minify }}
+  <div
+    class="hero-container"
+    style="background-image: url('{{ $bg1.Permalink }}');"
+  >
+    <h1>{{ .Site.Data.frontpage.title | safeHTML }}</h1>
+    <div></div>
   </div>
-  {{ $bg2 := resources.Get "img/background2.svg" | resources.Minify }}
-  <div class=" section-2" style="background-image: url('{{ $bg2.Permalink }}');">
-    <section class="two-columns">
-      <div>
-        <pre>
-% wormhole send README.md
-Sending 7924 byte file named 'README.md'
-On the other computer, please run: wormhole receive
-Wormhole code is: 7-crossover-clockwork
- 
-Sending (<-10.0.1.43:58988)..
-100%|=========================| 7.92K/7.92K [00:00<00:00, 6.02MB/s]
-File sent.. waiting for confirmation
-Confirmation received. Transfer complete.</pre>
-      </div>
-      <div>
-        <h2>Send Files</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel.
-        </p>
-      </div>
-    </section>
-  </div>
-  {{ $bg3 := resources.Get "img/background3.svg" | resources.Minify }}
-  <div class=" section-3" style="background-image: url('{{ $bg3.Permalink }}');">
+</div>
+{{ $bg2 := resources.Get "img/background2.svg" | resources.Minify }}
+<div class="section-2" style="background-image: url('{{ $bg2.Permalink }}');">
   <section class="two-columns">
     <div>
-      <h2>Recieve Files</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel.
-      </p>
+      <div class="terminal-window-header">
+        <div class="terminal-window-header-point"></div>
+        <div class="terminal-window-header-point"></div>
+        <div class="terminal-window-header-point"></div>
+      </div>
+      <pre class="terminal-window">
+{{ .Site.Data.frontpage.section1.code }}</pre
+      >
     </div>
     <div>
-      <pre>
-% wormhole receive
-Enter receive wormhole code: 7-crossover-clockwork
-Receiving file (7924 bytes) into: README.md
-ok? (y/n): y
-Receiving (->tcp:10.0.1.43:58986)..
-100%|===========================| 7.92K/7.92K [00:00<00:00, 120KB/s]
-Received file written to README.md</pre>
+      <h2>{{ .Site.Data.frontpage.section1.title }}</h2>
+      <p>{{ .Site.Data.frontpage.section1.text }}</p>
     </div>
   </section>
-  </div>
-  {{ $bg4 := resources.Get "img/background4.svg" | resources.Minify }}
-  <div class=" section-4" style="background-image: url('{{ $bg4.Permalink }}');">
-    <section class="two-columns">
-      <div>
-        <h2>Recieve Files</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel.
-        </p>
-      </div>
-      <div>
-        <div id="termynal" data-termynal>
-          <span data-ty="input">pip install spacy</span>
-          <span data-ty="progress"></span>
-          <span data-ty>Successfully installed spacy</span>
-          <span data-ty></span>
-          <span data-ty="input">python -m spacy download en</span>
-          <span data-ty="progress"></span>
-          <span data-ty>Installed model 'en'</span>
-          <span data-ty></span>
-          <span data-ty="input">python</span>
-          <span data-ty="input" data-ty-prompt=">>>">import spacy</span>
-          <span data-ty="input" data-ty-prompt=">>>">nlp = spacy.load('en')</span>
-          <span data-ty="input" data-ty-prompt=">>>">doc = nlp(u'Hello world')</span>
-          <span data-ty="input" data-ty-prompt=">>>">print([(w.text, w.pos_) for w in doc])</span>
-          <span data-ty>[('Hello', 'INTJ'), ('world', 'NOUN')]</span>
-      </div>
-      </div>
-    </section>
+</div>
+{{ $bg3 := resources.Get "img/background3.svg" | resources.Minify }}
+<div class="section-3" style="background-image: url('{{ $bg3.Permalink }}');">
+  <section class="two-columns">
+    <div>
+      <h2>{{ .Site.Data.frontpage.section2.title }}</h2>
+      <p>{{ .Site.Data.frontpage.section2.text }}</p>
     </div>
+    <div>
+      <div class="terminal-window-header">
+        <div class="terminal-window-header-point"></div>
+        <div class="terminal-window-header-point"></div>
+        <div class="terminal-window-header-point"></div>
+      </div>
+      <pre class="terminal-window">
+{{ .Site.Data.frontpage.section2.code }}</pre
+      >
+    </div>
+  </section>
+</div>
+{{ $bg4 := resources.Get "img/background4.svg" | resources.Minify }}
+<div class="section-4" style="background-image: url('{{ $bg4.Permalink }}');">
+  <section class="one-column">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Feature X</th>
+        <th>Feature Y</th>
+        <th>Feature Z</th>
+        <th>Link</th>
+      </tr>
+      {{ range .Site.Data.frontpage.comparisonTable }}
+      <tr>
+        <td>{{ .name }}</td>
+        <td>{{ .featureX }}</td>
+        <td>{{ .featureY }}</td>
+        <td>{{ .featureZ }}</td>
+        <td><a href="{{ .link }}">Go there</a></td>
+      </tr>
+      {{ end }}
+    </table>
+  </section>
+</div>
 {{ end }}

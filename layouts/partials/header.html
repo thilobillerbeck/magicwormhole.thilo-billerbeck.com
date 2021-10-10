@@ -1,16 +1,16 @@
 <header>
-    <div class="container">
-        <nav>
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
-            <ul>
-              <li>
-                  <a href="{{ .URL }}">
-                      <span>{{ .Name }}</span>
-                  </a>
-              </li>
-            </ul>
-            {{ end }}
-        </nav>
-    </div>
-  </header>
+  <div class="container nav-container">
+    <span class="brand">Magic Wormhole</span>
+    <nav>
+      {{ $currentPage := . }} {{ range .Site.Menus.main }}
+      <ul>
+        <li>
+          <a href="{{ .URL }}">
+            <span>{{ .Name }}</span>
+          </a>
+        </li>
+      </ul>
+      {{ end }}
+    </nav>
+  </div>
+</header>
