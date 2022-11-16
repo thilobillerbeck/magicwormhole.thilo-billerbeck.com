@@ -12,65 +12,6 @@
 </div>
 {{ $bg2 := resources.Get "img/background2.svg" | resources.Minify }}
 <div class="section-2" style="background-image: url('{{ $bg2.Permalink }}');">
-  <section class="two-columns">
-    <div>
-      <div class="terminal-window-header">
-        <div class="terminal-window-header-point"></div>
-        <div class="terminal-window-header-point"></div>
-        <div class="terminal-window-header-point"></div>
-      </div>
-      <pre class="terminal-window">
-{{ .Site.Data.frontpage.section1.code }}</pre
-      >
-    </div>
-    <div>
-      <h2>{{ .Site.Data.frontpage.section1.title }}</h2>
-      <p>{{ .Site.Data.frontpage.section1.text }}</p>
-    </div>
-  </section>
-</div>
-{{ $bg3 := resources.Get "img/background3.svg" | resources.Minify }}
-<div class="section-3" style="background-image: url('{{ $bg3.Permalink }}');">
-  <section class="two-columns">
-    <div>
-      <h2>{{ .Site.Data.frontpage.section2.title }}</h2>
-      <p>{{ .Site.Data.frontpage.section2.text }}</p>
-    </div>
-    <div>
-      <div class="terminal-window-header">
-        <div class="terminal-window-header-point"></div>
-        <div class="terminal-window-header-point"></div>
-        <div class="terminal-window-header-point"></div>
-      </div>
-      <pre class="terminal-window">
-{{ .Site.Data.frontpage.section2.code }}</pre
-      >
-    </div>
-  </section>
-</div>
-{{ $bg4 := resources.Get "img/background4.svg" | resources.Minify }}
-<div class="section-4" style="background-image: url('{{ $bg4.Permalink }}');">
-  <section class="one-column">
-    <h2>{{ .Site.Data.frontpage.table.title }}</h2>
-    <p>{{ .Site.Data.frontpage.table.text }}</p>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Feature X</th>
-        <th>Feature Y</th>
-        <th>Feature Z</th>
-        <th>Link</th>
-      </tr>
-      {{ range .Site.Data.frontpage.comparisonTable }}
-      <tr>
-        <td><b>{{ .name }}</b></td>
-        <td>{{ .featureX }}</td>
-        <td>{{ .featureY }}</td>
-        <td>{{ .featureZ }}</td>
-        <td><a href="{{ .link }}">Go there</a></td>
-      </tr>
-      {{ end }}
-    </table>
-  </section>
+  <div class="container">{{ .Content }}</div>
 </div>
 {{ end }}

@@ -9,6 +9,10 @@ name = 'Home'
 url = '/'
 weight = -110
 [[menu.main]]
+name = 'Get'
+url = '/get'
+weight = -105
+[[menu.main]]
 name = 'Docs'
 url = '/docs/welcome'
 weight = -100
