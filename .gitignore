@@ -1,6 +1,8 @@
 # Hugo default output directory
 /public
+/resources
 resources
+resources/
 .hugo_build.lock
 
 ## OS Files
