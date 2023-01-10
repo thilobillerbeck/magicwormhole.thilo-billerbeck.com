@@ -1,0 +1,10 @@
+<div class="hero">
+  {{ $bg1 := resources.Get "img/background.svg" | resources.Minify }}
+  <div
+    class="hero-container"
+    style="background-image: url('{{ $bg1.Permalink }}');"
+  >
+    <h1>{{ .Get "title" }}</h1>
+    <div>{{ .Inner | markdownify }}</div>
+  </div>
+</div>

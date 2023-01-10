@@ -1,17 +1,1 @@
-{{ define "main" }}
-<!-- TODO: remove the dirty svg background hackery -->
-<div class="hero">
-  {{ $bg1 := resources.Get "img/background.svg" | resources.Minify }}
-  <div
-    class="hero-container"
-    style="background-image: url('{{ $bg1.Permalink }}');"
-  >
-    <h1>{{ .Site.Data.frontpage.title | safeHTML }}</h1>
-    <div></div>
-  </div>
-</div>
-{{ $bg2 := resources.Get "img/background2.svg" | resources.Minify }}
-<div class="section-2" style="background-image: url('{{ $bg2.Permalink }}');">
-  <div class="container">{{ .Content }}</div>
-</div>
-{{ end }}
+{{ define "main" }} {{ .Content }} {{ end }}

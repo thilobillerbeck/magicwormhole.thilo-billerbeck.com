@@ -1,16 +1,45 @@
+---
+---
+
+{{< hero title="Get things from one computer to another, safely." >}}
 (n.b.: The "safely" is a word randomly chosen from the following list: safely, securely, easily, quickly)
 
 https://xkcd.com/949/
+{{< /hero >}}
+
+{{< section-2 >}}
+{{< two-columns >}}
+{{< tc-content >}}
 
 ## Intro
 
 Magic Wormhole is a solution to quickly send files and folders to other devices, no account needed.
 
 When sending a file, you get a short code that may look like this: `42-hurricane-equipment`. You tell that code to the person you want to send the file to, who then enters the code to receive the file. Everything else is handled by the software
+{{< /tc-content >}}
+{{< tc-terminal >}}
+Test-Content
+{{< /tc-terminal >}}
+{{< /two-columns >}}
+{{< /section-2 >}}
+
+{{< section-3 >}}
+{{< two-columns >}}
+{{< tc-content >}}
 
 ## What it does
 
+{{< /tc-content >}}
+{{< tc-content >}}
+
 ## What it doesn't
+
+{{< /tc-content >}}
+{{< /two-columns >}}
+{{< /section-3 >}}
+
+{{< section-4 >}}
+{{< one-column >}}
 
 ## How it works
 
@@ -63,3 +92,5 @@ Magic Wormhole is not defined as a single protocol. Instead, it involves multipl
   - The cryptography is a lot simpler than anything using TLS, notably you don't need any certificates.
 
 See [get it] for a list of available libraries and bindings.
+{{< /one-column >}}
+{{< /section-4 >}}

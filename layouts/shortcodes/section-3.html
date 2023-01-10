@@ -1,0 +1,4 @@
+{{ $bg3 := resources.Get "img/background3.svg" | resources.Minify }}
+<div class="section-3" style="background-image: url('{{ $bg3.Permalink }}');">
+  {{ .Inner }}
+</div>
