@@ -59,6 +59,8 @@ Once established, the connection gives the security guarantees of a [secure chan
 - Authenticity: An active attacker can not manipulate encrypted messages without being detected
 - Secure channel: An active attacker cannot replay past authentic messages, nor change the order in which messages are received
 
+For a more in-depth security analysis, refer to the protocol documentation TODO link
+
 ## Privacy
 
 Unless additional measures are taken (see below), the following metadata are inevitably leaked to the rendezvous server:
@@ -73,7 +75,7 @@ In order to establish a direct connection, the following data is sent to the oth
 - Public IP address
 - Local IP addresses
 
-Especially the latter may leak information about the local network topology, as well as potentially used VPNs. For this reason, there is an option to force the use of a relay server. However keep in mind that the other person might be hosting the relay server you are using and thus still at least get your public IP address. Use [Tor](https://torproject.org/) to defend against this.
+Especially the latter may leak information about the local network topology, as well as potentially used VPNs. For this reason, there is an option to force the use of a relay server. However, keep in mind that the other person might be hosting the relay server you are using and thus still at least get your public IP address. Use [Tor](https://torproject.org/) to defend against this.
 
 Connecting from the Tor network will likely hide your IP address from the involved servers, granting you anonymity. Note that because of the above, simply tunnelling the connection over Tor might not be enough. Instead, use a client that has native Tor support built in. Alternatively, route your entire operating system connection through Tor with [Whonix](https://www.whonix.org/).
 

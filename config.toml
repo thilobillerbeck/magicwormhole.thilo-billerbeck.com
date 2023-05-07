@@ -2,17 +2,18 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Magic Wormhole'
 assetDir = "assets"
+enableInlineShortcodes = true
 
 [menu]
 [[menu.main]]
 name = 'Home'
-url = '/'
+pageRef = '/'
 weight = -110
 [[menu.main]]
 name = 'Get'
-url = '/get'
+pageRef = '/get'
 weight = -105
 [[menu.main]]
 name = 'Docs'
-url = '/docs/welcome'
+pageRef = '/docs'
 weight = -100

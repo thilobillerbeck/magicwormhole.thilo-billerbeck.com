@@ -1,0 +1,4 @@
+<!-- A file as argument -->
+{{$file := .Get 0}}
+<!-- Read that file, remove all lines starting with '#' (markdown first headline) -->
+{{ readFile $file | replaceRE `^#.*\n` "" | safeHTML }}

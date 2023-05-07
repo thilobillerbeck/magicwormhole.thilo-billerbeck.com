@@ -356,8 +356,12 @@ template {
 
 body {
   font-family: sans-serif;
-  background-color: #2b0030;
-  color: #ddf1ff;
+  //background-color: #2b0030;
+  //color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    background-color: #2b0030;
+    color: #ddf1ff;
+  }
   display: flex;
   flex-flow: column;
 
@@ -370,8 +374,6 @@ body {
 
   /* or 178% */
   font-feature-settings: "salt" on, "liga" off;
-
-  color: #ddf1ff;
 }
 
 .hero {
@@ -431,7 +433,9 @@ h1 {
   /* or 118% */
   font-feature-settings: "salt" on, "liga" off;
 
-  color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    color: #ddf1ff;
+  }
 }
 
 h2 {
@@ -443,7 +447,9 @@ h2 {
 
   font-feature-settings: "salt" on, "liga" off;
 
-  color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    color: #ddf1ff;
+  }
 }
 
 header {
@@ -508,7 +514,10 @@ section {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #4c134f;
+
+  @media (prefers-color-scheme:dark) {
+    background-color: #4c134f;
+  }
 }
 
 a {
@@ -519,16 +528,20 @@ a {
 }
 
 code {
-  background-color: black;
   font-family: "Source Code Pro";
-  color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    color: #ddf1ff;
+    background-color: black;
+  }
   padding: 0.15rem 0.5rem;
   border-radius: 8px;
 }
 
 pre {
-  background-color: black;
-  color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    background-color: black;
+    color: #ddf1ff;
+  }
   padding: 1rem;
   code {
     background-color: transparent;
@@ -590,7 +603,9 @@ pre {
 .sidebar-menu-item {
   display: block;
   text-decoration: none;
-  color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    color: #ddf1ff;
+  }
   padding: 0.5rem 1rem;
   border-radius: 16px;
   border-left: 0.25rem solid transparent;
@@ -612,8 +627,10 @@ pre {
 }
 
 ::selection {
-  color: #4c134f;
-  background: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    color: #4c134f;
+    background: #ddf1ff;
+  }
 }
 
 header {
@@ -630,7 +647,9 @@ header {
           display: block;
           padding: 1rem;
           text-decoration: none;
-          color: #ddf1ff;
+          @media (prefers-color-scheme:dark) {
+            color: #ddf1ff;
+          }
         }
       }
     }
@@ -654,13 +673,17 @@ header {
   position: relative;
   border-radius: 16px 16px 0 0;
   padding: 0 16px;
-  background-color: #101010;
+  @media (prefers-color-scheme:dark) {
+    background-color: #101010;
+  }
   display: flex;
 }
 
 .terminal-window-header-point {
   position: relative;
-  background-color: #202020;
+  @media (prefers-color-scheme:dark) {
+    background-color: #202020;
+  }
   height: 16px;
   width: 16px;
   margin: 16px 8px;
@@ -672,7 +695,9 @@ header {
   font-weight: bold;
   padding: 1rem;
   text-decoration: none;
-  color: #ddf1ff;
+  @media (prefers-color-scheme:dark) {
+    color: #ddf1ff;
+  }
 }
 
 table {

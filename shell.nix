@@ -1,4 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
-    nativeBuildInputs = [ pkgs.hugo ];
+    nativeBuildInputs = with pkgs; [
+      hugo
+      zola
+    ];
 }
